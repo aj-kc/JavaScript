@@ -6,18 +6,30 @@ document.getElementById("num2-el").textContent = num2
 
 function add(){
     console.log("Add Clicked")
+    document.getElementById("sum-el").textContent = "Sum: "
     sum = num1 + num2
     document.getElementById("sum-el").textContent += sum
 }
 
-function subctract(){
+function subtract(){
     console.log("Subtract Clicked")
+    document.getElementById("sum-el").textContent = "Sum: "
+    sum = num1 - num2
+    document.getElementById("sum-el").textContent += sum
 }
 
 function divide(){
     console.log("Divide Clicked")
+    document.getElementById("sum-el").textContent = "Sum: "
+    sum = num1 / num2
+    document.getElementById("sum-el").textContent += sum
+
 }
 
 function multiply(){
     console.log("Multiply Clicked")
+    document.getElementById("sum-el").textContent = "Sum: "
+    sum = num1 * num2
+    document.getElementById("sum-el").textContent += sum
+    
 }
