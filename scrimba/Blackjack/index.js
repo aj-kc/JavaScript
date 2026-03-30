@@ -1,30 +1,27 @@
 let firstCard = 20
 let secondCard = 11
-let age = 100
-
+let hasBlackJack = false
+let isAlive = true
+let message = ""
 let sum = firstCard + secondCard
+let messageEl = document.getElementById("message-el")
+console.log(messageEl)
 
-console.log(sum)
-console.log(age)
+function  startGame(){
+    console.log(sum)
 
-if (sum < 21){
-   console.log("Do you want to draw a new card?")   
-}
+    if (sum < 21){
+   message = "Do you want to draw a new card?" 
+    }
 
     else if(sum === 21){
-        console.log("You have won!")
+        message = "You have won!"
+        hasBlackJack = true
     }
-
-        else{
-            console.log("You have gone Bust!")
-        }
-
-
-
-if (age > 20){
-    console.log("Welcome to the club!")
-}
 
     else{
-        console.log("You cannnot come in.")
-    }
+        message = "You have gone Bust!"
+        }
+
+    messageEl.textContent = message
+}
