@@ -2,11 +2,18 @@ let myLeads = []
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
+let leadsFromLocalStorage = JSON.parse(localStorage.getItem("myLeads"))
+
+console.log(leadsFromLocalStorage)
+
 
 inputBtn.addEventListener("click", function() {
   myLeads.push(inputEl.value)
   inputEl.value = ""
-  console.log(myLeads)
+
+  localStorage.setItem("myLeads", JSON.stringify(myLeads))
+
+  console.log(localStorage.getItem("myLeads"))
   renderLeads()
 })
 
@@ -21,13 +28,12 @@ function renderLeads()
                  ${myLeads[i]}
             </a>
           </li>`
-    }
+   
+        localStorage.setItem("myLeads", `${myLeads[i]}`)
+        localStorage.getItem("myLeads")    
+        localStorage.clear()
+        }
 
     ulEl.innerHTML = listItems
 }
 
-const recipient = "James"
-const sender = "Aaron"
-
-const email = `Hey ${recipient} How is it going? Cheers ${sender}.`
-console.log(email)
