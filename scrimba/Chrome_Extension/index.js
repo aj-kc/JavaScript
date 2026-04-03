@@ -1,3 +1,16 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-app.js"
+import { getDatabase } from "https://www.gstatic.com/firebasejs/12.11.0/firebase-database.js"
+
+const firebaseConfig = {
+  databaseURL: "https://mobile-app-scrimba-25558-default-rtdb.europe-west1.firebasedatabase.app/"
+}
+
+const app = initializeApp(firebaseConfig)
+const database = getDatabase(app)
+
+console.log(app)
+
+
 let myLeads = []
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
